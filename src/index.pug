@@ -8,7 +8,7 @@ html
     link(href='assets/css/main.css')
     script(src='assets/js/vendor.js')
     script(src='assets/js/main.js')
-      
+
   - var pageURL = window.location.pathname
   if pageURL === '/' 
     body.hw-home
@@ -17,3 +17,8 @@ html
   if pageURL === '/what-is-this' 
     body.hw-about
       include partials/header
+
+      main.hw-main
+        include content/map
+    
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCU0v5s-rJO6jZlJasVHOsfDuDEGprXt8Y&callback=initMap" async defer)
