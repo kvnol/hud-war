@@ -7,7 +7,9 @@ const gulp = require('gulp'),
       pug  = require('gulp-pug');
 
 const files = {
-  css: ['src/assets/sass/main.sass'],
+  css: [
+    'src/assets/sass/main.sass'
+  ],
   cssVendor: [
     'node_modules/normalize.css/normalize.css'
   ],

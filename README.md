@@ -1,2 +1,2 @@
-# hud-war
-Survival Guide and Maps with information about wars
+# Hudwar
+A survival guide and maps with information about wars.
