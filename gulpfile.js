@@ -4,7 +4,8 @@ const gulp = require('gulp'),
       sass = require('gulp-sass'),
       cleancss = require('gulp-cleancss'),
       concat = require('gulp-concat'),
-      pug  = require('gulp-pug');
+      pug  = require('gulp-pug'),
+      uglify = require('gulp-uglify');
 
 const files = {
   css: [
@@ -13,7 +14,9 @@ const files = {
   cssVendor: [
     'node_modules/normalize.css/normalize.css'
   ],
-  js: [''],
+  js: [
+    'src/assets/js/*'
+  ],
   jsVendor: ['']
 }
 
@@ -43,4 +46,11 @@ gulp.task('cssVendor', function() {
     .pipe(gulp.dest('dist/assets/css'));
 });
 
-gulp.task('default', ['views', 'css', 'cssVendor']);
+gulp.task('js', function() {
+  return gulp.src(files.js)
+    .pipe(concat('main.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('dist/assets/js'));
+});
+
+gulp.task('default', ['views', 'css', 'cssVendor', 'js']);
