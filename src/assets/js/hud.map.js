@@ -145,8 +145,8 @@ function initMap() {
    name: 'Styled Map'
   });
 
- var map = new google.maps.Map(document.getElementById('map'), {
-  zoom: 5,
+ var map = new google.maps.Map(document.querySelector('[data-id="map"]'), {
+  zoom: 12,
   center: {
    lat: -33.9,
    lng: 151.2,
