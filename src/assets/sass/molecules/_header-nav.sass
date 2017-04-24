@@ -1,0 +1,47 @@
+/*
+ * @name: _header-nav.sass
+ * @version: 1.0.0
+ * @description: Styles to menu header.
+ */
+
+.hw-nav
+  height: 120px
+  @extend %flexbox
+  +align-items(center)
+  +justify-content(center)
+  background-color: $color-brand
+
+.hw-nav__item
+  font:
+    size: 2rem
+    weight: 900
+  text-shadow: 0 .111rem rgba(0,0,0,.2) 
+  
+  &:not(:last-child)
+    margin-right: 4rem
+
+.hw-nav__item-sub
+  display: block
+  font:
+    size: .95rem
+    weight: 300
+  text-align: center
+
+.hw-nav__button
+  width: 9rem
+  height: 2.5rem
+  margin: 0 auto
+  background-color: $color-brand
+  border: 0
+  border-radius: 0 0 .555rem .555rem
+
+  &:before
+    content: '\27A4'
+    display: block
+    padding: 0
+    margin: 0
+    font-size: 1.6rem
+    color: rgba(0,0,0,.25)
+    text-align: center
+    line-height: 0
+    transform: rotate(-90deg)

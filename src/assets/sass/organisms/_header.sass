@@ -1,0 +1,24 @@
+/*
+ * @name: _header.sass
+ * @version: 1.0.0
+ * @description: Import styles to header.
+ */
+
+.hw-header
+  position: relative
+  z-index: 1
+  @extend %flexbox
+  +flex-direction(column)
+  transform: translateY(-(7.4rem))
+
+  .hw-nav__button:before
+    transform: rotate(90deg)
+
+  &.active  
+    transform: translateY(0)
+
+    .hw-nav__button:before
+      transform: rotate(-90deg)
+
+
+@import 'molecules/header-nav'
